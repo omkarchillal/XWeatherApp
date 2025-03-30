@@ -26,7 +26,7 @@ function WeatherApp() {
         windSpeed: data.current.wind_kph,
       });
     } catch (error) {
-      alert("Failed to fetch weather data");
+      window.alert("Failed to fetch weather data");
     } finally {
       setLoading(false);
     }
@@ -34,7 +34,7 @@ function WeatherApp() {
 
   return (
     <div className="container text-center py-5">
-      <div className="row justify-content-center mb-4">
+      <div className="row justify-content-center mb-3">
         <div className="col-md-4">
           <input
             type="text"
@@ -51,8 +51,7 @@ function WeatherApp() {
         </div>
       </div>
 
-      {/* {loading && <p className="text-dark fw-bold">Loading data…</p>} */}
-      {loading && <p style={{ marginTop: "10px" }}>Loading data…</p>}
+      {loading && <p className="text-dark fw-bold">Loading data...</p>}
 
       {weather && (
         <div className="row weather-cards justify-content-center">
