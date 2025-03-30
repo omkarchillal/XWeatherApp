@@ -51,7 +51,7 @@ function WeatherApp() {
         </div>
       </div>
 
-      {loading && <p className="text-dark">Loading data…</p>}
+      {loading && <p className="text-dark fw-bold">Loading data…</p>}
 
       {weather && (
         <div className="row weather-cards justify-content-center">
